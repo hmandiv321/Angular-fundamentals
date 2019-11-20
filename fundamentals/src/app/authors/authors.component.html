@@ -4,4 +4,5 @@
         {{  author  }}
     </li>
 </ul>
-<input (keyup.enter)="onKeyUp()">
+<!-- Template Variables -->
+<input #email (keyup.enter)="onKeyUp(email.value)">
