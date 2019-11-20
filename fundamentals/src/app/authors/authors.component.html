@@ -1,15 +1,20 @@
-<h2>{{authors.length}} Authors</h2>
-<ul>
-    <li *ngFor="let author of authors">
-        {{  author  }}
-    </li>
-</ul>
-<!-- Template Variables -->
-<!-- Passing data to email using property binding -->
-<input [value]="email" (keyup.enter)="onKeyUpOneWayBinding()">
-<br><br>
-<!-- Two way binding 
-need to import @angular/forms
+<!--  Built in pipe examples  -->
+{{Test.title | uppercase }}<br/>
+<!-- using multiple pipes in one -->
+{{Test.title | uppercase | lowercase}}<br/>
+<!-- decimal (number) pipe  -->
+{{Test.commaExample | number}}<br/>
+<!-- decimal (number) with more comtrol pipe
+1.2-2 ==> min two decimals and max 3 decimals
+if 2.3-4 ==> the eg 04.555
 -->
-<input [(ngModel)]="twoWay" (keyup.enter)="onKeyUpTwoWayBinding()">
+{{Test.rating | number:'1.2-3'}}<br/>
+<!--  currency pipe multiple arg :'CAD':true ==> true means symbol
+Shown
+--> 
+{{Test.price | currency:'CAD':true:'3.2-2'}}<br/>
+<!-- Date pipe 
+To see all formats ==> angular.io search datepipe
+-->
+{{Test.date | date:'shortDate'}}<br/>
 
