@@ -24,9 +24,14 @@ export class AuthorsComponent implements OnInit {
    * Angular special syntax for two way binding==>
    * <input [(ngModel)]="email" (keyup.enter)="onKeyUp()">
    */
-   email;
-   onKeyUp() {
-    console.log(this.email);
+   email = 'me@example.com';
+   twoWay = 'me@example.com';
+   onKeyUpOneWayBinding() {
+    console.log('One way binding', this.email);
+   }
+
+   onKeyUpTwoWayBinding() {
+    console.log('Two way binding', this.twoWay);
    }
 
   ngOnInit() {

@@ -6,10 +6,10 @@
 </ul>
 <!-- Template Variables -->
 <!-- Passing data to email using property binding -->
-<input [value]="email" (keyup.enter)="onKeyUp()">
+<input [value]="email" (keyup.enter)="onKeyUpOneWayBinding()">
 <br><br>
 <!-- Two way binding 
 need to import @angular/forms
 -->
-<input [(ngModel)]="email" (keyup.enter)="onKeyUp()">
+<input [(ngModel)]="twoWay" (keyup.enter)="onKeyUpTwoWayBinding()">
 
