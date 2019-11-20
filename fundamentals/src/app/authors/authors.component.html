@@ -5,4 +5,11 @@
     </li>
 </ul>
 <!-- Template Variables -->
-<input #email (keyup.enter)="onKeyUp(email.value)">
+<!-- Passing data to email using property binding -->
+<input [value]="email" (keyup.enter)="onKeyUp()">
+<br><br>
+<!-- Two way binding 
+need to import @angular/forms
+-->
+<input [(ngModel)]="email" (keyup.enter)="onKeyUp()">
+

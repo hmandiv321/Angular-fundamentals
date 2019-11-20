@@ -12,9 +12,21 @@ export class AuthorsComponent implements OnInit {
   constructor(service: AuthorsService) {
     this.authors = service.getAuthors();
    }
-   // Template Variables
-   onKeyUp(email) {
-    console.log(email);
+   /* If this email variable ispopulated eg. email = "me@example"
+   then the input field will show me@example as the html has
+   <input [value]="email" (keyup.enter)="onKeyUp()">
+   But with only property binding aka "one way binding"
+   changes to from the dom wont be reflected in the component
+   we use two way binding for that
+   */
+  // Two-way binding
+  /**
+   * Angular special syntax for two way binding==>
+   * <input [(ngModel)]="email" (keyup.enter)="onKeyUp()">
+   */
+   email;
+   onKeyUp() {
+    console.log(this.email);
    }
 
   ngOnInit() {
