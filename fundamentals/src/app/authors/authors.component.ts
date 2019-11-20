@@ -9,14 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class AuthorsComponent implements OnInit {
 
   authors;
-  isActive = false;
   constructor(service: AuthorsService) {
     this.authors = service.getAuthors();
    }
-   onSave($event) {
-     // prevent event bubbling
-     $event.stopPropagation();
-     console.log('button clicked', $event);
+   // angular way no need for the $event to be passed
+   onKeyUp() {
+    // Traditional way of implementing this
+    /* <input (keyup)="onKeyUp($event)">
+    if ($event.keyCode === 13) {
+      console.log('Enter was pressed');
+    }*/
+
+    // Angular way in html
+    /*<input (keyup.enter)="onKeyUp()"> */
+    console.log('Enter was pressed');
    }
 
   ngOnInit() {
