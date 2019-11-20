@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AuthorsComponent implements OnInit {
 
   authors;
+  isActive = true;
   constructor(service: AuthorsService) {
     this.authors = service.getAuthors();
    }
