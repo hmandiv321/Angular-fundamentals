@@ -9,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class AuthorsComponent implements OnInit {
 
   authors;
-  isActive = true;
+  isActive = false;
   constructor(service: AuthorsService) {
     this.authors = service.getAuthors();
+   }
+   onSave($event) {
+     // prevent event bubbling
+     $event.stopPropagation();
+     console.log('button clicked', $event);
    }
 
   ngOnInit() {
