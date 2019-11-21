@@ -17,7 +17,7 @@ export class FavouriteComponent implements OnInit {
   * Want to mark this field
   * as an output event for this component
   */
- @Output() change = new EventEmitter();
+ @Output('change') change = new EventEmitter();
   constructor() { }
 
   makeStarFullOrempty() {
