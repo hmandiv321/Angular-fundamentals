@@ -35,3 +35,13 @@ export class FavouriteComponent implements OnInit {
   }
 
 }
+/**
+ * To get compile time check and
+ * intellisense use interface and use it
+ * onFavoriteChanged(eventArgs: FavouriteComponentArgs) {
+ * console.log('Favorite changed: ', eventArgs);
+ * }
+ */
+export interface FavouriteComponentArgs {
+  newValue: boolean;
+}
