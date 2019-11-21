@@ -1,2 +1,10 @@
 <h1>Angular</h1>
-<app-favourite [isFav]="post.isFav" (change)="onFavoriteChanged()"></app-favourite>
+<!-- 
+passing the custom events boolean value
+through the onFavoriteChanged 
+method using $event 
+-->
+<app-favourite 
+[isFav]="post.isFav" 
+(change)="onFavoriteChanged($event)">
+</app-favourite>

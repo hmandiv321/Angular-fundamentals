@@ -22,8 +22,13 @@ export class FavouriteComponent implements OnInit {
 
   makeStarFullOrempty() {
     this.isFavorite = !this.isFavorite;
-    // use this to raise an event
-    this.change.emit();
+    /**
+     * passing the new state of the component
+     * through the emitter
+     * this.change.emit(this.isFavorite); or we can
+     * pass objects like the example below
+     */
+    this.change.emit({newValue: this.isFavorite});
   }
 
   ngOnInit() {
