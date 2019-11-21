@@ -10,4 +10,7 @@ export class AppComponent {
     title: 'Title',
     isFav: true
   };
+  onFavoriteChanged(){
+    console.log('Favorite changed');
+  }
 }
