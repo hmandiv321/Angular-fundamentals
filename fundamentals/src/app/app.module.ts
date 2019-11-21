@@ -8,8 +8,7 @@ import { FavouriteComponent } from './favourite/favourite.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FavouriteComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
