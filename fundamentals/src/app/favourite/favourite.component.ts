@@ -10,11 +10,11 @@ export class FavouriteComponent implements OnInit {
  * Want to mark this field
  * as an input property for this component
  */
- @Input() isFav: boolean;
+ @Input('isFav') isFavorite: boolean;
   constructor() { }
 
   makeStarFullOrempty() {
-    this.isFav = !this.isFav;
+    this.isFavorite = !this.isFavorite;
   }
 
   ngOnInit() {
