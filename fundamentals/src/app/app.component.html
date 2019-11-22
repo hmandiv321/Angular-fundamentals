@@ -1,6 +1,2 @@
 <h1>Angular</h1>
-<app-liked
-[likeCount]="like.likeCount"
-[isActive]="like.isLiked"
->
-</app-liked>
+<app-test [isFavorite]="fav.active" [clickedAmount]="fav.userClicks" (change)="onChange($event)"></app-test>

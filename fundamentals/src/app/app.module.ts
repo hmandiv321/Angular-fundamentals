@@ -4,12 +4,12 @@ import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LikedComponent } from './liked/liked.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LikedComponent
+    TestComponent
   ],
   imports: [
     BrowserModule,
