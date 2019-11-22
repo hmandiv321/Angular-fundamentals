@@ -1,1 +1,26 @@
 <h1>Angular</h1>
+<div *ngIf="courses.length > 0; then coursesList else noCourses"></div>
+<ng-template #coursesList>
+    List of courses
+</ng-template>
+<ng-template #noCourses>
+    No courses yet
+</ng-template>
+<!--One Way
+<div *ngIf="doWeHaveAnyCourses()">
+    List of courses
+</div>
+-->
+<!--Another way
+<div *ngIf="courses.length > 0; else noCourses">
+    List of courses
+</div>
+<ng-template #noCourses>
+    No courses yet
+</ng-template>
+-->
+<!--OLDER WAY
+<div *ngIf="courses.length === 0">
+    No courses yet
+</div>
+-->

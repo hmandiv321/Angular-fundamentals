@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  courses = [];
 
+  doWeHaveAnyCourses() {
+    return this.courses.length > 0;
+  }
 }
