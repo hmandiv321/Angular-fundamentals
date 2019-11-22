@@ -1,0 +1,20 @@
+<p>panel works!</p>
+<div class="panel panel-default">
+<!-- 
+Adding two injection points
+so that consumer of this 
+component aka for this example "app.component.ts"
+can provide content into
+these injection points
+-->
+    <div class="panel-heading">
+        <!--Custom element defined in angular
+        select="" is used to identify this
+        content from others
+        -->
+        <ng-content select=".heading"></ng-content>
+    </div>
+    <div class="panel-body">
+        <ng-content select=".body"></ng-content>
+    </div>
+</div>
