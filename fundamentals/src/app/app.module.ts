@@ -4,12 +4,10 @@ import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ZippyComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
