@@ -1,7 +1,5 @@
 <h1>Angular</h1>
-<button (click)="loadCourses()">Load Courses</button>
- <ul>
-    <li *ngFor="let topic of topics; trackBy: trackTopic">
-        {{ topic.name }}
-    </li>
-</ul>
+<!--instead of do it this way its nicer to do it the following way
+<input type="text" appInputFormat [format]="'uppercase'">
+-->
+<input type="text" [appInputFormat]="'uppercase'">
