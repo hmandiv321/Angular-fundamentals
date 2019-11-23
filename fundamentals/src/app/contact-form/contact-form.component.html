@@ -1,11 +1,17 @@
 <form>
     <div class="form-group">
         <label for="firstName">First Name</label>
-        <!--
-            Adding validation using template driven approach
-            ngModel aka ==> a directive allows that
+        <input required ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control">
+        <!--Using 'valid' property of ngModel Directive 
+            to show validation message using 
+            *ngIf="firstName.valid"
+            FYI 'firstName' of 'firstName.valid' is the 
+            template variable from the above input feild
         -->
-        <input ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control">                  
+        <div class="alert alert-danger" 
+        *ngIf="firstName.touched && !firstName.valid">
+            First Name is Required
+        </div>                  
     </div>
     <div class="form-group">
         <label for="comment">Comment</label>
