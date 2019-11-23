@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-  courses = [];
-
-  doWeHaveAnyCourses() {
-    return this.courses.length > 0;
-  }
+  viewMode = 'map';
 }
