@@ -1,14 +1,7 @@
 <h1>Angular</h1>
-<!--
-    <ul>
-        <li *ngFor="let topic of topics; index as i">
-            {{i}}-{{ topic.name }}
-        </li>
-    </ul>
-
- -->
+<button (click)="loadCourses()">Load Courses</button>
  <ul>
-    <li *ngFor="let topic of topics; even as isEven">
-        {{ topic.name }} <span *ngIf="isEven">(Even)</span>
+    <li *ngFor="let topic of topics; trackBy: trackTopic">
+        {{ topic.name }}
     </li>
 </ul>
