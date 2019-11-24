@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-contact-form',
@@ -13,6 +14,7 @@ contactMethods = [
   { id: 4, name: 'Drone' },
 ];
   submit(form) {
-    console.log(form.value);
+    console.log(JSON.stringify(form.value));
   }
 }
+

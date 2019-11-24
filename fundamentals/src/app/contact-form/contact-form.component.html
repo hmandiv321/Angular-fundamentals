@@ -32,14 +32,8 @@
         class="form-control">
         </textarea>
     </div>
-    <!--Adding Check box-->
     <div class="checkbox">
         <label>
-            <!--Adding ngModel
-                Angular creates an instance of the
-                for control object for this input
-                field
-            -->
             <input type="checkbox" ngModel name="isSubscribed"> Subscribe
         </label>
     </div>
@@ -47,10 +41,18 @@
         <label for="contactMethod">contact Method</label>
         <select multiple ngModel name="contactMethod" id="conctactMethod" class="form-control">
             <option value=""></option>
-            <option *ngFor="let contact of contactMethods" [value]="contact.id">
+            <option *ngFor="let contact of contactMethods" [ngValue]="contact">
                 {{contact.name}}
             </option>
         </select>
+    </div>
+    
+    <!--Adding Radio button-->
+    <div *ngFor="let radioContact of contactMethods" class="radio">
+        <label for="conctactMethod">
+            <input ngModel type="radio" name="radioContactMethod" [value]="radioContact">
+            {{radioContact.name}}
+        </label>
     </div>
     <p>
         {{ form.value | json }}
