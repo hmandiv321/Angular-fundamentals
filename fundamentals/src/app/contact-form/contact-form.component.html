@@ -1,24 +1,30 @@
 <form #form="ngForm" (ngSubmit)="submit(form)">
-    <div class="form-group">
-        <label for="firstName">First Name</label>
-        <input required minlength="5" maxlength="10" 
-        pattern="bananna" ngModel name="firstName" 
-        #firstName="ngModel"  id="firstName" 
-        type="text" class="form-control">
-        <div class="alert alert-danger" 
-        *ngIf="firstName.touched && !firstName.valid">
-            <div *ngIf="firstName.errors.required">
-                First Name is required
-            </div>
-            <div *ngIf="firstName.errors.minlength" >
-                First Name should be min 
-                {{ firstName.errors.minlength.requiredLength }} 
-                chars
-            </div>
-            <div *ngIf="firstName.errors.pattern" >
-                First Name doesnt match pattern
-            </div>
-        </div>                  
+    <div ngModelGroup="contact" #contact="ngModelGroup">
+        <!--Check to see if the entire group
+            AKA in ngModelGroup is valid or not
+        -->
+        <div *ngIf="!contact.valid">All the errors</div>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input required minlength="5" maxlength="10" 
+            pattern="bananna" ngModel name="firstName" 
+            #firstName="ngModel"  id="firstName" 
+            type="text" class="form-control">
+            <div class="alert alert-danger" 
+            *ngIf="firstName.touched && !firstName.valid">
+                <div *ngIf="firstName.errors.required">
+                    First Name is required
+                </div>
+                <div *ngIf="firstName.errors.minlength" >
+                    First Name should be min 
+                    {{ firstName.errors.minlength.requiredLength }} 
+                    chars
+                </div>
+                <div *ngIf="firstName.errors.pattern" >
+                    First Name doesnt match pattern
+                </div>
+            </div>                  
+        </div>
     </div>
     <div class="form-group">
         <label for="comment">Comment</label>
