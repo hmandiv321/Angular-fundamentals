@@ -43,6 +43,15 @@
             <input type="checkbox" ngModel name="isSubscribed"> Subscribe
         </label>
     </div>
+    <div class="form-group">
+        <label for="contactMethod">contact Method</label>
+        <select ngModel name="contactMethod" id="conctactMethod" class="form-control">
+            <option value=""></option>
+            <option *ngFor="let contact of contactMethods" [value]="contact.id">
+                {{contact.name}}
+            </option>
+        </select>
+    </div>
     <p>
         {{ form.value | json }}
     </p>
