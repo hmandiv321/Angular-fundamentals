@@ -32,8 +32,19 @@
         class="form-control">
         </textarea>
     </div>
-    <!--Disabling the submit button till all
-        inputs are valid
-    -->
+    <!--Adding Check box-->
+    <div class="checkbox">
+        <label>
+            <!--Adding ngModel
+                Angular creates an instance of the
+                for control object for this input
+                field
+            -->
+            <input type="checkbox" ngModel name="isSubscribed"> Subscribe
+        </label>
+    </div>
+    <p>
+        {{ form.value | json }}
+    </p>
     <button class="btn btn-primary" [disabled]="!form.valid">Submit</button>
 </form>
