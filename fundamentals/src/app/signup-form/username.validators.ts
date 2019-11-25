@@ -8,4 +8,21 @@ export class UsernameValidators {
             return null;
         }
     }
+
+    static shouldBeUnique(control: AbstractControl): Promise<ValidationErrors | null> {
+        return new Promise((resolve, reject) => {
+            /**
+             * using set time out to mock server call
+             */
+            setTimeout(() => {
+                if (control.value === 'HR') {
+                    console.log('if');
+                    resolve ({shouldBeUnique: true});
+                } else {
+                    console.log('else');
+                    resolve (null);
+                }
+            }, 2000);
+        });
+    }
 }
