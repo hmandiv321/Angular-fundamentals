@@ -3,6 +3,8 @@
         <label for="username">Username</label>
         <input formControlName="username" id="username" 
         type="text" class="form-control">
+        <!--Showing that we are checking 'username.pending'-->
+        <div *ngIf="username.pending">Checking For uniqueness...</div>
         <div *ngIf="username.touched && username.invalid" 
         class="alert alert-danger">
             <div *ngIf="username.errors.required">
