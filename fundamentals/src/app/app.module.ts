@@ -4,14 +4,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignupFormComponent } from './signup-form/signup-form.component';
-import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SignupFormComponent,
-    NewCourseFormComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
