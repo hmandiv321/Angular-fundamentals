@@ -1,4 +1,4 @@
 # Angular-fundamentals
-Angular fundamentals Project
+Angular fundamentals
 
 
