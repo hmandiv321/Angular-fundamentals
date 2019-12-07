@@ -1,2 +1,2 @@
 # Angular-fundamentals
-Angular fundamentals project
+Angular project
